@@ -1,14 +1,12 @@
-<html>
-    <head>
-        <title>Merchex</title>
-    </head>
-    <body>
-        <h1>Les annonces</h1>
-        <p>Voici nos différentes annonces </p>
-        <ul>
-            {% for ann in announcement %}
-                <li>{{ ann.title }}</li>
-            {% endfor %}
-        </ul>
-    </body>
-</html>
+{% extends 'listings/base.html' %}
+{% block content %}
+
+<h1>Les annonces</h1>
+<p>Voici nos différentes annonces </p>
+<ul>
+    {% for ann in announcement %}
+        <li>{{ ann.title }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
