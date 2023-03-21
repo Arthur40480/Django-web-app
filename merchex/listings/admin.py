@@ -1,5 +1,14 @@
 from django.contrib import admin
 from listings.models import Band
+from listings.models import Announcement
 
-admin.site.register(Band)
+class BandAdmin(admin.ModelAdmin):
+    list_display = ('name', 'year_formed', 'genre')
+
+admin.site.register(Band, BandAdmin)
+
+class AnnouncementAdmin(admin.ModelAdmin):
+    list_display = ('title', 'type', 'year', 'band')
+
+admin.site.register(Announcement, AnnouncementAdmin)
 # Register your models here.

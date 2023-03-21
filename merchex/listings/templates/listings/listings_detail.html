@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %}
+{% block content %}
+
+<h1>{{ announcement.title}}</h1>
+
+<ul>
+    <li>Type: {{ announcement.get_type_display }}</li>
+    <li>L'année de sortie: {{ announcement.year }}</li>
+    <li>Vendu: {{ announcement.sold|yesno }}</li>
+</ul>
+
+<p>{{ announcement.description }}</p>
+
+{% endblock %}

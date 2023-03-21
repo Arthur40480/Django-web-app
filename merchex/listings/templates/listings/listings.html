@@ -2,10 +2,12 @@
 {% block content %}
 
 <h1>Les annonces</h1>
-<p>Voici nos différentes annonces </p>
+
 <ul>
     {% for ann in announcement %}
-        <li>{{ ann.title }}</li>
+    <li>
+        <a href="{% url 'listing-detail' ann.id %}">{{ ann.title }}</a>
+    </li>
     {% endfor %}
 </ul>
 
