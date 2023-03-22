@@ -10,5 +10,8 @@
 </ul>
 
 <p>{{ announcement.description }}</p>
+<a href="{% url 'listing-update' announcement.id %}">Modifier ce groupe</a>
+<a href="{% url 'listing-list' %}">Retourner à tous les groupes</a>
+<a href="{% url 'listing-delete' announcement.id %}">Supprimer ce groupe</a>
 
 {% endblock %}

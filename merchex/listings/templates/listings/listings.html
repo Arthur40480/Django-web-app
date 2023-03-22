@@ -3,10 +3,13 @@
 
 <h1>Les annonces</h1>
 
+<a href="{% url 'listings-add' %}">Créer une nouvelle annonce</a>
+
 <ul>
     {% for ann in announcement %}
     <li>
-        <a href="{% url 'listing-detail' ann.id %}">{{ ann.title }}</a>
+        <a href="{% url 'listing-detail' ann.id %}">{{ ann.title }}</a> -
+        <a href="{% url 'listing-update' ann.id %}">Editer</a>
     </li>
     {% endfor %}
 </ul>
